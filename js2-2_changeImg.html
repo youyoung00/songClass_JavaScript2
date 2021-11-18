@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>javascript</title>
+
+    </head>
+
+    <body id="body">
+
+        <img id="photo" src="pic_bulboff.gif">
+        <button id="btn">전구 불바꾸기</button>
+        <button id="btn2">크기 바꾸기</button>
+
+
+    </body>
+
+    <script>
+
+        /// = 이퀄을 사용하게 되는 경우, 변수로 판단하는 근거가 됨.
+        /// . 또는 ()로 사용하게 되는 경우, 함수로 판단하는 근거가 됨. 
+
+        var oldImage = document
+            .getElementById("photo")
+            .src;
+
+        document
+            .getElementById('btn')
+            .addEventListener('click', function () {
+
+                // if(document.getElementById("photo").src == oldImage){
+                // document.getElementById("photo").src = "pic_bulbon.gif"; } else {
+                // document.getElementById("photo").src = "pic_bulboff.gif"; }
+
+                document.getElementById("photo")
+                    .src == oldImage
+                        ? document
+                            .getElementById("photo")
+                            .src = "pic_bulbon.gif"
+                        : document
+                            .getElementById("photo")
+                            .src = "pic_bulboff.gif";
+            });
+
+            var oldSize = document.getElementById('photo').style.width;
+            document.getElementById('btn2').addEventListener('click', function(){
+
+                console.log(oldSize);
+
+                document.getElementById('photo').style.width = "30%";
+                // if(document.getElementById('photo').style.width == oldSize)
+                // document.getElementById('photo').style.width = oldSize + "10%";
+            });
+
+    </script>
+</html>

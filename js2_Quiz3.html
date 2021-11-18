@@ -36,11 +36,14 @@
 
                 } else {
                     var result = "";
-                    for (var i = 0; i < num; i++) {
-                        result = result + i;
+                    for (var i = 0; i <= 100; i++) {
+                        if (i % 3 == 0) {
+                            result = result + '<span style="color:Red;">' + i + '</span>';
+                        } else {
+                            result = result + i;
+                        }
                     }
 
-                    console.log(result);
                     document.getElementById('text').innerHTML = result;
                 }
             }

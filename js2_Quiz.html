@@ -11,6 +11,11 @@
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
+
+        <!-- *퀴즈1
+        1. 숫자 2개 받음
+        2. 숫자가 아니면 처음으로
+        3. 둘다 숫자가 맞으면 화면에 둘의 합을 표시(innerHTML) -->
         
         <button id="btn">숫자넣기</button>
         <p id="text">결과 나오는 곳</p>
@@ -36,7 +41,7 @@
                     alert("문자가 아닌 숫자로 입력해주세요");
                     sumFunc();
                 } else {
-                    var sumNum = num2 + num2;
+                    var sumNum = num1 + num2;
                     document
                         .getElementById('text')
                         .innerHTML = sumNum;
